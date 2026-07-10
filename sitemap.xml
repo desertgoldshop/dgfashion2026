@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dg-fashion.com/</loc></url>
+  <url><loc>https://dg-fashion.com/collection.html</loc></url>
+  <url><loc>https://dg-fashion.com/about.html</loc></url>
+  <url><loc>https://dg-fashion.com/journal.html</loc></url>
   <url><loc>https://dg-fashion.com/contact.html</loc></url>
   <url><loc>https://dg-fashion.com/faq.html</loc></url>
   <url><loc>https://dg-fashion.com/privacy.html</loc></url>
@@ -9,14 +12,14 @@
   <url><loc>https://dg-fashion.com/n001.html</loc></url>
   <url><loc>https://dg-fashion.com/n002.html</loc></url>
   <url><loc>https://dg-fashion.com/n003.html</loc></url>
+  <url><loc>https://dg-fashion.com/r001.html</loc></url>
+  <url><loc>https://dg-fashion.com/n006.html</loc></url>
+  <url><loc>https://dg-fashion.com/s001.html</loc></url>
+  <url><loc>https://dg-fashion.com/n008.html</loc></url>
   <url><loc>https://dg-fashion.com/n004.html</loc></url>
   <url><loc>https://dg-fashion.com/n005.html</loc></url>
-  <url><loc>https://dg-fashion.com/n006.html</loc></url>
   <url><loc>https://dg-fashion.com/n007.html</loc></url>
-  <url><loc>https://dg-fashion.com/n008.html</loc></url>
+  <url><loc>https://dg-fashion.com/s002.html</loc></url>
   <url><loc>https://dg-fashion.com/n009.html</loc></url>
   <url><loc>https://dg-fashion.com/n010.html</loc></url>
-  <url><loc>https://dg-fashion.com/r001.html</loc></url>
-  <url><loc>https://dg-fashion.com/s001.html</loc></url>
-  <url><loc>https://dg-fashion.com/s002.html</loc></url>
 </urlset>
