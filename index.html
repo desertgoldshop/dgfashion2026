@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desert Gold | 30 Products for Saudi Style</title>
-  <meta name="description" content="Desert Gold 30-product catalog for Saudi and GCC buyers. Gold-plated jewelry, gift sets, PayPal payment and direct email support.">
+  <title>Desert Gold | Jewelry for Saudi Gifting and Daily Style</title>
+  <meta name="description" content="Shop a focused Desert Gold jewelry edit with real product photos, transparent order support, PayPal payment and Saudi-focused delivery guidance.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="./favicon-32.png" sizes="32x32">
   <style>
     :root {
       --bg: #110d0a;
@@ -223,6 +225,7 @@
     .visual {
       min-height: 190px;
       padding: 20px;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -244,6 +247,31 @@
     .visual strong {
       font-size: 22px;
       color: var(--cream);
+    }
+
+    .visual.has-photo {
+      height: 240px;
+      min-height: 240px;
+      padding: 0;
+      background: #241a13;
+    }
+
+    .product-photo,
+    .detail-photo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-id {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 1;
+      background: rgba(17, 13, 10, 0.78) !important;
+      color: var(--cream);
+      backdrop-filter: blur(6px);
     }
 
     .visual-n { background-color: #4a2e14; }
@@ -314,12 +342,122 @@
       padding-left: 18px;
     }
 
+    .page-main {
+      padding: 38px 0 24px;
+    }
+
+    .page-intro {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .page-intro h2 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.08;
+    }
+
+    .page-intro p:last-child {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .info-card {
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .info-card h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .product-detail {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .detail-visual {
+      min-height: 520px;
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .detail-visual strong {
+      font-size: clamp(36px, 6vw, 72px);
+      line-height: 1;
+    }
+
+    .detail-visual.has-photo {
+      padding: 0;
+      position: relative;
+      background: #241a13;
+    }
+
+    .detail-copy {
+      padding: 34px;
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .detail-copy h2 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.08;
+    }
+
+    .detail-description {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .detail-price {
+      margin: 22px 0 0;
+      font-size: 28px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
     footer {
       padding: 26px 8px 10px;
       color: var(--muted);
       text-align: center;
       font-size: 14px;
     }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a:hover { color: var(--cream); }
 
     @media (max-width: 960px) {
       .metrics,
@@ -342,9 +480,13 @@
 
       .metrics,
       .grid,
-      .support {
+      .support,
+      .info-grid,
+      .product-detail {
         grid-template-columns: 1fr;
       }
+
+      .detail-visual { min-height: 360px; }
 
       .hero h2 {
         font-size: 34px;
@@ -368,31 +510,43 @@
       </div>
       <nav>
         <a href="#necklaces">Necklaces</a>
-        <a href="#earrings">Earrings</a>
-        <a href="#bracelets">Bracelets</a>
         <a href="#rings">Rings</a>
         <a href="#gift-sets">Gift Sets</a>
-        <a href="#support">Support</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./contact.html">Contact</a>
       </nav>
     </header>
 
     <section class="hero">
-      <p class="eyebrow">30 Product Catalog</p>
-      <h2>Gold-plated jewelry for gifting, daily wear and Saudi style.</h2>
+      <p class="eyebrow">Curated Saudi Jewelry</p>
+      <h2>Gift-ready jewelry with clear support before and after you order.</h2>
       <p class="hero-copy">
-        This version is built to solve the empty-shelf problem first. It puts a full 30-style catalog in front of buyers,
-        keeps the order path simple with email plus PayPal, and gives us a clean base to swap in real supplier photos next.
+        Explore a focused edit with real product photos, straightforward pricing and direct order support.
+        We confirm the product, delivery details and payment path with you before dispatch.
       </p>
       <div class="hero-actions">
         <a href="#necklaces">Browse Collection</a>
-        <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Wholesale%20Inquiry&body=Hello%20Desert%20Gold%2C%20I%20want%20the%20latest%20catalog%2C%20prices%20and%20shipping%20details.">Email Us</a>
-        <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">Pay Sample Deposit</a>
+        <a class="ghost" href="./shipping-returns.html">Shipping & Returns</a>
+        <a class="ghost" href="./contact.html">Contact Us</a>
       </div>
       <div class="metrics">
-        <div class="metric"><strong>30</strong><span>Products now visible instead of a near-empty collection.</span></div>
-        <div class="metric"><strong>5</strong><span>Core categories for necklaces, earrings, bracelets, rings and gift sets.</span></div>
-        <div class="metric"><strong>Saudi</strong><span>First market focus with GCC-ready styling and gifting language.</span></div>
-        <div class="metric"><strong>PayPal</strong><span>Simple payment path already connected for sample and order deposit.</span></div>
+        <div class="metric"><strong>13</strong><span>Photo-backed styles selected for a focused first collection.</span></div>
+        <div class="metric"><strong>Clear</strong><span>Product, quantity and delivery details confirmed before payment.</span></div>
+        <div class="metric"><strong>Saudi</strong><span>First market focus with GCC-ready gifting and support.</span></div>
+        <div class="metric"><strong>PayPal</strong><span>Recognized payment path for confirmed samples and orders.</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="trust-heading">
+      <div class="section-head">
+        <div><p class="eyebrow">Buy With Confidence</p><h2 id="trust-heading">A clear order path, not a low-price promise.</h2></div>
+        <p class="section-copy">We focus on accurate product confirmation, transparent shipping information and responsive after-sales handling.</p>
+      </div>
+      <div class="info-grid">
+        <article class="info-card"><h3>See the product clearly</h3><p>Request additional photos or details using the product style ID before you confirm an order.</p></article>
+        <article class="info-card"><h3>Confirm before payment</h3><p>Quantity, destination, shipping estimate and order total are confirmed in writing before payment.</p></article>
+        <article class="info-card"><h3>Track the order</h3><p>Dispatch and tracking information are shared when the order leaves the shipping partner.</p></article>
+        <article class="info-card"><h3>Get after-sales support</h3><p>For a damaged or incorrect item, contact us promptly with photos so the issue can be reviewed.</p></article>
       </div>
     </section>
 
@@ -408,507 +562,171 @@
       <div class="grid">
         
       <article class="card">
-        <div class="visual visual-n">
-          <span>N001</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n001.html" aria-label="View Layered Pearl Bead Necklace"><img class="product-photo" src="./assets/products/n001.webp" alt="Layered Pearl Bead Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N001</span></a>
         <div class="card-copy">
           <p class="mini">Everyday Edit</p>
-          <h3>Gold Crescent Pendant Necklace</h3>
-          <p>Warm pendant necklace for daily gifting and easy layering.</p>
+          <h3><a href="./n001.html">Layered Pearl Bead Necklace</a></h3>
+          <p>Long layered necklace with black and pearl-style beads for statement daily styling.</p>
           <div class="meta">
-            <span>129 SAR</span>
+            <span>$117</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Gold%20Crescent%20Pendant%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n001.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Layered%20Pearl%20Bead%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N002</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n002.html" aria-label="View Fine Gold Chain Selection"><img class="product-photo" src="./assets/products/n002.webp" alt="Fine Gold Chain Selection" loading="lazy" width="672" height="896"><span class="photo-id">N002</span></a>
         <div class="card-copy">
           <p class="mini">Best Seller</p>
-          <h3>Layered Shine Chain Necklace</h3>
-          <p>Layered chain look with stronger polish for Saudi daily styling.</p>
+          <h3><a href="./n002.html">Fine Gold Chain Selection</a></h3>
+          <p>A polished selection of fine gold-tone chain patterns for minimal everyday looks.</p>
           <div class="meta">
-            <span>139 SAR</span>
+            <span>$15</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Layered%20Shine%20Chain%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n002.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Fine%20Gold%20Chain%20Selection.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N003</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n003.html" aria-label="View Crystal Flame Pendant Necklace"><img class="product-photo" src="./assets/products/n003.webp" alt="Crystal Flame Pendant Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N003</span></a>
         <div class="card-copy">
           <p class="mini">Gift Edit</p>
-          <h3>Pearl Glow Statement Necklace</h3>
-          <p>Soft pearl-led shine for dressier gifting and polished looks.</p>
+          <h3><a href="./n003.html">Crystal Flame Pendant Necklace</a></h3>
+          <p>Gold-tone necklace with a bright crystal pendant and soft occasion-ready shine.</p>
           <div class="meta">
-            <span>149 SAR</span>
+            <span>$58</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N003&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Pearl%20Glow%20Statement%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n003.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N003&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Flame%20Pendant%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N004</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n004.html" aria-label="View Heart Medallion Gold Necklace"><img class="product-photo" src="./assets/products/n004.webp" alt="Heart Medallion Gold Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N004</span></a>
         <div class="card-copy">
           <p class="mini">Gift Edit</p>
-          <h3>Heart Charm Gold Necklace</h3>
-          <p>Heart charm piece designed for gifting, birthdays and easy styling.</p>
+          <h3><a href="./n004.html">Heart Medallion Gold Necklace</a></h3>
+          <p>Textured heart medallion necklace with a warm gold finish for gifting.</p>
           <div class="meta">
-            <span>119 SAR</span>
+            <span>$22</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N004&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Heart%20Charm%20Gold%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n004.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N004&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Heart%20Medallion%20Gold%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N005</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n005.html" aria-label="View Textured Gold Pendant Necklace"><img class="product-photo" src="./assets/products/n005.webp" alt="Textured Gold Pendant Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N005</span></a>
         <div class="card-copy">
           <p class="mini">Party Edit</p>
-          <h3>Evening Crystal Pendant Necklace</h3>
-          <p>Crystal-led pendant for party looks and occasion dressing.</p>
+          <h3><a href="./n005.html">Textured Gold Pendant Necklace</a></h3>
+          <p>Bold gold-tone bead and pendant necklace with a traditional statement profile.</p>
           <div class="meta">
-            <span>159 SAR</span>
+            <span>$15</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N005&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Evening%20Crystal%20Pendant%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n005.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N005&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Textured%20Gold%20Pendant%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N006</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n006.html" aria-label="View Double Circle Layered Necklace"><img class="product-photo" src="./assets/products/n006.webp" alt="Double Circle Layered Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N006</span></a>
         <div class="card-copy">
           <p class="mini">Everyday Edit</p>
-          <h3>Minimal Daily Gold Necklace</h3>
-          <p>Low-friction gold look for repeat wear and lighter luxury orders.</p>
+          <h3><a href="./n006.html">Double Circle Layered Necklace</a></h3>
+          <p>Layered gold-tone chain with a linked-circle centerpiece and modern styling.</p>
           <div class="meta">
-            <span>109 SAR</span>
+            <span>$112</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N006&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Minimal%20Daily%20Gold%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n006.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N006&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Double%20Circle%20Layered%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N007</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n007.html" aria-label="View Open Heart Pendant Necklace"><img class="product-photo" src="./assets/products/n007.webp" alt="Open Heart Pendant Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N007</span></a>
         <div class="card-copy">
           <p class="mini">Best Seller</p>
-          <h3>Star Drop Layer Necklace</h3>
-          <p>Star-inspired layered necklace with gift-ready Middle East appeal.</p>
+          <h3><a href="./n007.html">Open Heart Pendant Necklace</a></h3>
+          <p>Light gold-tone heart pendant designed for easy gifting and daily wear.</p>
           <div class="meta">
-            <span>145 SAR</span>
+            <span>$22</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N007&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Star%20Drop%20Layer%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n007.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N007&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Open%20Heart%20Pendant%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N008</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n008.html" aria-label="View Rose Gold Mobius Pendant Necklace"><img class="product-photo" src="./assets/products/n008.webp" alt="Rose Gold Mobius Pendant Necklace" loading="lazy" width="672" height="896"><span class="photo-id">N008</span></a>
         <div class="card-copy">
           <p class="mini">Gift Edit</p>
-          <h3>Classic Link Gift Necklace</h3>
-          <p>Polished link style built for gifting and first-order confidence.</p>
+          <h3><a href="./n008.html">Rose Gold Mobius Pendant Necklace</a></h3>
+          <p>Rose-gold tone Mobius pendant with crystal accents and a polished chain.</p>
           <div class="meta">
-            <span>135 SAR</span>
+            <span>$318</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N008&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Classic%20Link%20Gift%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n008.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N008&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Rose%20Gold%20Mobius%20Pendant%20Necklace.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N009</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n009.html" aria-label="View S925 Silver Gold-Tone Chain Edit"><img class="product-photo" src="./assets/products/n009.webp" alt="S925 Silver Gold-Tone Chain Edit" loading="lazy" width="672" height="896"><span class="photo-id">N009</span></a>
         <div class="card-copy">
           <p class="mini">Party Edit</p>
-          <h3>Crystal Light Occasion Necklace</h3>
-          <p>Occasion-focused necklace with softer shine and premium feel.</p>
+          <h3><a href="./n009.html">S925 Silver Gold-Tone Chain Edit</a></h3>
+          <p>Multiple refined chain patterns with gold-tone finishing for versatile styling.</p>
           <div class="meta">
-            <span>169 SAR</span>
+            <span>$67</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N009&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Light%20Occasion%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n009.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N009&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20S925%20Silver%20Gold-Tone%20Chain%20Edit.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-n">
-          <span>N010</span>
-          <strong>Necklaces</strong>
-        </div>
+        <a class="visual has-photo" href="./n010.html" aria-label="View 18K Gold-Tone Chain Collection"><img class="product-photo" src="./assets/products/n010.webp" alt="18K Gold-Tone Chain Collection" loading="lazy" width="672" height="896"><span class="photo-id">N010</span></a>
         <div class="card-copy">
           <p class="mini">Everyday Edit</p>
-          <h3>Daily Luxe Pendant Necklace</h3>
-          <p>Clean daily pendant that pairs easily with abayas and dresses.</p>
+          <h3><a href="./n010.html">18K Gold-Tone Chain Collection</a></h3>
+          <p>A mixed chain collection with heart, rope and link patterns for daily layering.</p>
           <div class="meta">
-            <span>115 SAR</span>
+            <span>$26</span>
             <span>Necklaces</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N010&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Daily%20Luxe%20Pendant%20Necklace.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      </div>
-    </section>
-    
-    <section class="section" id="earrings">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Earrings</p>
-          <h2>Earrings</h2>
-        </div>
-        <p class="section-copy">Lighter add-on products with strong visual impact for social shoppers.</p>
-      </div>
-      <div class="grid">
-        
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E001</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Party Edit</p>
-          <h3>Crystal Drop Earrings</h3>
-          <p>Sparkle-led earrings for evening styling and premium gifting.</p>
-          <div class="meta">
-            <span>99 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Drop%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E002</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Everyday Edit</p>
-          <h3>Gold Hoop Daily Earrings</h3>
-          <p>Easy gold hoop pair for repeat wear and clean daily edits.</p>
-          <div class="meta">
-            <span>89 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Gold%20Hoop%20Daily%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E003</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Gift Edit</p>
-          <h3>Pearl Touch Gift Earrings</h3>
-          <p>Pearl-accent pair designed for gifting and lighter luxury style.</p>
-          <div class="meta">
-            <span>109 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E003&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Pearl%20Touch%20Gift%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E004</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Party Edit</p>
-          <h3>Evening Crystal Earrings</h3>
-          <p>Sharper shine for dinner looks, events and elegant photos.</p>
-          <div class="meta">
-            <span>119 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E004&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Evening%20Crystal%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E005</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Everyday Edit</p>
-          <h3>Mini Gold Stud Pair</h3>
-          <p>Simple studs for first-order add-on sales and daily styling.</p>
-          <div class="meta">
-            <span>79 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E005&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Mini%20Gold%20Stud%20Pair.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E006</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Gift Edit</p>
-          <h3>Moonlight Charm Earrings</h3>
-          <p>Moon-inspired pair with softer gifting and layered styling appeal.</p>
-          <div class="meta">
-            <span>105 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E006&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Moonlight%20Charm%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E007</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Party Edit</p>
-          <h3>Statement Party Earrings</h3>
-          <p>Bolder party earrings for social content and premium outfit styling.</p>
-          <div class="meta">
-            <span>129 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E007&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Statement%20Party%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-e">
-          <span>E008</span>
-          <strong>Earrings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Best Seller</p>
-          <h3>Elegant Daily Earrings</h3>
-          <p>Refined pair with polished finish for everyday luxury looks.</p>
-          <div class="meta">
-            <span>95 SAR</span>
-            <span>Earrings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20E008&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Elegant%20Daily%20Earrings.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      </div>
-    </section>
-    
-    <section class="section" id="bracelets">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Bracelets</p>
-          <h2>Bracelets</h2>
-        </div>
-        <p class="section-copy">Easy bundle builders that lift order value without heavy decision-making.</p>
-      </div>
-      <div class="grid">
-        
-      <article class="card">
-        <div class="visual visual-b">
-          <span>B001</span>
-          <strong>Bracelets</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Everyday Edit</p>
-          <h3>Crystal Accent Bracelet</h3>
-          <p>Easy bracelet add-on for mixed orders and gift-ready bundles.</p>
-          <div class="meta">
-            <span>79 SAR</span>
-            <span>Bracelets</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20B001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Accent%20Bracelet.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-b">
-          <span>B002</span>
-          <strong>Bracelets</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Best Seller</p>
-          <h3>Gold Link Bracelet</h3>
-          <p>Warm gold bracelet with gifting value and clean daily polish.</p>
-          <div class="meta">
-            <span>99 SAR</span>
-            <span>Bracelets</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20B002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Gold%20Link%20Bracelet.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-b">
-          <span>B003</span>
-          <strong>Bracelets</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Gift Edit</p>
-          <h3>Heart Gift Bracelet</h3>
-          <p>Heart-detail bracelet aimed at birthdays and small premium gifts.</p>
-          <div class="meta">
-            <span>89 SAR</span>
-            <span>Bracelets</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20B003&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Heart%20Gift%20Bracelet.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-b">
-          <span>B004</span>
-          <strong>Bracelets</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Gift Edit</p>
-          <h3>Pearl Glow Bracelet</h3>
-          <p>Pearl-accent bracelet for feminine gifting and softer styling.</p>
-          <div class="meta">
-            <span>109 SAR</span>
-            <span>Bracelets</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20B004&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Pearl%20Glow%20Bracelet.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-b">
-          <span>B005</span>
-          <strong>Bracelets</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Everyday Edit</p>
-          <h3>Slim Daily Stack Bracelet</h3>
-          <p>Slim stack bracelet that works well with necklaces and ring edits.</p>
-          <div class="meta">
-            <span>85 SAR</span>
-            <span>Bracelets</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20B005&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Slim%20Daily%20Stack%20Bracelet.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-b">
-          <span>B006</span>
-          <strong>Bracelets</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Party Edit</p>
-          <h3>Crystal Party Bracelet</h3>
-          <p>Occasion bracelet with brighter shine for event styling.</p>
-          <div class="meta">
-            <span>119 SAR</span>
-            <span>Bracelets</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20B006&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Party%20Bracelet.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./n010.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20N010&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%2018K%20Gold-Tone%20Chain%20Collection.">Ask for Photos</a>
           </div>
         </div>
       </article>
@@ -927,81 +745,18 @@
       <div class="grid">
         
       <article class="card">
-        <div class="visual visual-r">
-          <span>R001</span>
-          <strong>Rings</strong>
-        </div>
+        <a class="visual has-photo" href="./r001.html" aria-label="View Crystal Lattice Statement Ring"><img class="product-photo" src="./assets/products/r001.webp" alt="Crystal Lattice Statement Ring" loading="lazy" width="672" height="896"><span class="photo-id">R001</span></a>
         <div class="card-copy">
           <p class="mini">Everyday Edit</p>
-          <h3>Gold Curve Ring</h3>
-          <p>Warm gold ring for easy gifting and low-friction add-on sales.</p>
+          <h3><a href="./r001.html">Crystal Lattice Statement Ring</a></h3>
+          <p>Silver-tone statement ring with a bright lattice crystal setting.</p>
           <div class="meta">
-            <span>89 SAR</span>
+            <span>$38</span>
             <span>Rings</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20R001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Gold%20Curve%20Ring.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-r">
-          <span>R002</span>
-          <strong>Rings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Party Edit</p>
-          <h3>Crystal Light Ring</h3>
-          <p>Crystal ring with polished shine for dinner looks and gifting.</p>
-          <div class="meta">
-            <span>99 SAR</span>
-            <span>Rings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20R002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Light%20Ring.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-r">
-          <span>R003</span>
-          <strong>Rings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Gift Edit</p>
-          <h3>Pearl Touch Ring</h3>
-          <p>Pearl-accent ring with lighter luxury appeal for curated sets.</p>
-          <div class="meta">
-            <span>95 SAR</span>
-            <span>Rings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20R003&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Pearl%20Touch%20Ring.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
-          </div>
-        </div>
-      </article>
-  
-      <article class="card">
-        <div class="visual visual-r">
-          <span>R004</span>
-          <strong>Rings</strong>
-        </div>
-        <div class="card-copy">
-          <p class="mini">Best Seller</p>
-          <h3>Statement Gold Ring</h3>
-          <p>Bolder ring design built for stronger visual impact in first orders.</p>
-          <div class="meta">
-            <span>109 SAR</span>
-            <span>Rings</span>
-          </div>
-          <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20R004&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Statement%20Gold%20Ring.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./r001.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20R001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Crystal%20Lattice%20Statement%20Ring.">Ask for Photos</a>
           </div>
         </div>
       </article>
@@ -1020,41 +775,35 @@
       <div class="grid">
         
       <article class="card">
-        <div class="visual visual-g">
-          <span>S001</span>
-          <strong>Gift Sets</strong>
-        </div>
+        <a class="visual has-photo" href="./s001.html" aria-label="View Color Clover Pendant Selection"><img class="product-photo" src="./assets/products/s001.webp" alt="Color Clover Pendant Selection" loading="lazy" width="672" height="896"><span class="photo-id">S001</span></a>
         <div class="card-copy">
           <p class="mini">Gift Edit</p>
-          <h3>Daily Gold Gift Set</h3>
-          <p>Matching necklace, earrings and bracelet set for easy gifting.</p>
+          <h3><a href="./s001.html">Color Clover Pendant Selection</a></h3>
+          <p>A colorful clover pendant selection with multiple gift-ready finishes.</p>
           <div class="meta">
-            <span>249 SAR</span>
+            <span>$61</span>
             <span>Gift Sets</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20S001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Daily%20Gold%20Gift%20Set.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./s001.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20S001&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Color%20Clover%20Pendant%20Selection.">Ask for Photos</a>
           </div>
         </div>
       </article>
   
       <article class="card">
-        <div class="visual visual-g">
-          <span>S002</span>
-          <strong>Gift Sets</strong>
-        </div>
+        <a class="visual has-photo" href="./s002.html" aria-label="View Mini Gold Charm Necklace Selection"><img class="product-photo" src="./assets/products/s002.webp" alt="Mini Gold Charm Necklace Selection" loading="lazy" width="672" height="896"><span class="photo-id">S002</span></a>
         <div class="card-copy">
           <p class="mini">Party Edit</p>
-          <h3>Evening Crystal Gift Set</h3>
-          <p>Sparkle-led full set for party looks, occasions and premium gifting.</p>
+          <h3><a href="./s002.html">Mini Gold Charm Necklace Selection</a></h3>
+          <p>Nine compact gold-tone charm styles for gifting and everyday rotation.</p>
           <div class="meta">
-            <span>289 SAR</span>
+            <span>$22</span>
             <span>Gift Sets</span>
           </div>
           <div class="actions">
-            <a href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20S002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Evening%20Crystal%20Gift%20Set.">Ask for Photos</a>
-            <a class="ghost" href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal</a>
+            <a href="./s002.html">View Details</a>
+            <a class="ghost" href="mailto:desergoldshop2026@outlook.com?subject=Desert%20Gold%20Inquiry%20-%20S002&body=Hello%20Desert%20Gold%2C%20I%20want%20photos%2C%20price%20and%20shipping%20details%20for%20Mini%20Gold%20Charm%20Necklace%20Selection.">Ask for Photos</a>
           </div>
         </div>
       </article>
@@ -1069,16 +818,16 @@
           <p class="eyebrow">Support</p>
           <h2>Order path, shipping and contact</h2>
         </div>
-        <p class="section-copy">Buyers do not need a complex checkout yet. They can request photos and price first, then move into PayPal when ready.</p>
+        <p class="section-copy">Every first order follows the same confirmation steps so product, delivery and payment details remain clear.</p>
       </div>
       <div class="support">
         <article class="panel">
           <h3>How we handle first orders</h3>
           <ul>
-            <li>Buyer sends style IDs by email.</li>
-            <li>We reply with photos, prices and shipping details.</li>
-            <li>Sample or deposit can be paid through PayPal.</li>
-            <li>After real winning products are confirmed, we replace placeholders with supplier-approved visuals.</li>
+            <li>Send the style ID, quantity and delivery city.</li>
+            <li>Receive current product and shipping confirmation.</li>
+            <li>Review the final order total before PayPal payment.</li>
+            <li>Receive dispatch and tracking information when available.</li>
           </ul>
         </article>
         <article class="panel">
@@ -1086,13 +835,14 @@
           <p>Email: <a href="mailto:desergoldshop2026@outlook.com">desergoldshop2026@outlook.com</a></p>
           <p>Payment: <a href="https://www.paypal.com/ncp/payment/VL94WMYHV95EG" target="_blank" rel="noreferrer">PayPal payment link</a></p>
           <p>Market focus: Saudi Arabia first, GCC next.</p>
-          <p>Language support: English now, Arabic view can be added on the next round.</p>
+          <p>Policies: <a href="./shipping-returns.html">Shipping & Returns</a> · <a href="./privacy.html">Privacy</a></p>
         </article>
       </div>
     </section>
 
     <footer>
-      Desert Gold | 30-product rollout for Saudi-facing jewelry sales
+      <div class="footer-links"><a href="./privacy.html">Privacy</a><a href="./shipping-returns.html">Shipping & Returns</a><a href="./terms.html">Terms</a><a href="./faq.html">FAQ</a><a href="./contact.html">Contact</a></div>
+      Desert Gold | Jewelry for Saudi gifting and daily style
     </footer>
   </div>
 </body>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dg-fashion.com/sitemap.xml
