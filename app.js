@@ -22,17 +22,6 @@
     });
   }
 
-  document.querySelectorAll('[data-newsletter-form]').forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var input = form.querySelector('input[type="email"]');
-      if (!input || !input.value) return;
-      var subject = encodeURIComponent('Desert Gold collection updates');
-      var body = encodeURIComponent('Please add ' + input.value + ' to the Desert Gold collection update list.');
-      window.location.href = 'mailto:desergoldshop2026@outlook.com?subject=' + subject + '&body=' + body;
-    });
-  });
-
   document.querySelectorAll('[data-year]').forEach(function (node) {
     node.textContent = new Date().getFullYear();
   });

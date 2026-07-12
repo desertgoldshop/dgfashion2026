@@ -601,23 +601,31 @@ h2,
   line-height: 1.6;
 }
 
-.newsletter-form {
+.newsletter-action {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
+  justify-items: start;
+  gap: 10px;
 }
 
-.newsletter-form input {
-  min-width: 0;
-  height: 48px;
-  padding: 0 14px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 3px;
-  color: #fff;
-  background: transparent;
+.newsletter-action span {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 11px;
 }
 
-.newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.56); }
+.not-found { min-height: 56vh; }
+.not-found .button-row { margin-top: 30px; }
+
+.button-paypal-pending {
+  color: #5a6470;
+  background: #edf0f3;
+  border-color: #cbd1d7;
+  cursor: not-allowed;
+}
+
+.contact-panel .button-paypal-pending {
+  display: flex;
+  margin-top: 10px;
+}
 
 .site-footer {
   color: #d5d3cc;
@@ -1096,7 +1104,7 @@ details p {
   .journal-grid { grid-template-columns: 1fr; }
   .journal-card { min-height: 220px; }
   .newsletter { grid-template-columns: 1fr; gap: 28px; }
-  .newsletter-form { grid-template-columns: 1fr; }
+  .newsletter-action .button { width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 24px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; }
