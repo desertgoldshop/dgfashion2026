@@ -113,23 +113,17 @@ a { -webkit-tap-highlight-color: transparent; }
 .desktop-nav a[aria-current="page"]::after { right: 0; }
 
 .brand {
-  text-align: center;
-  line-height: 1;
+  display: flex;
+  width: 232px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
 }
 
-.brand strong {
+.brand img {
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.brand span {
-  display: block;
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 9px;
-  text-transform: uppercase;
+  width: 100%;
+  height: auto;
 }
 
 .header-actions {
@@ -1067,13 +1061,19 @@ details p {
 @media (max-width: 760px) {
   .container { width: min(var(--content), calc(100% - 28px)); }
   .header-row { min-height: 62px; grid-template-columns: 42px 1fr 42px; gap: 8px; }
+  .brand { width: 100%; height: 36px; min-width: 0; }
+  .brand img { width: min(100%, 188px); }
   .desktop-nav, .header-actions { display: none; }
   .menu-button { display: block; }
   .mobile-contact { display: flex; align-items: center; justify-content: center; font-size: 19px; }
   .mobile-nav {
-    position: fixed;
-    inset: 96px 0 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
     z-index: 45;
+    height: calc(100dvh - 62px);
+    overflow-y: auto;
     padding: 26px 22px;
     background: var(--surface);
   }
