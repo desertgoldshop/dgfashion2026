@@ -621,6 +621,23 @@ h2,
   margin-top: 10px;
 }
 
+.button-paypal-link {
+  color: #111;
+  background: #ffc439;
+  border-color: #ffc439;
+}
+
+.button-paypal-link:hover {
+  color: #111;
+  background: #f5b800;
+  border-color: #f5b800;
+}
+
+.contact-panel .button-paypal-link {
+  display: flex;
+  margin-top: 10px;
+}
+
 .site-footer {
   color: #d5d3cc;
   background: #10100f;
