@@ -1155,3 +1155,106 @@ details p {
   .process-rail article:last-child { border-bottom: 0; }
   .process-rail span { margin-bottom: 22px; }
 }
+
+/* B2B wholesale optimization */
+.wholesale-hero .hero-content {
+  max-width: 740px;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.business-grid article {
+  min-height: 230px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+}
+
+.business-grid article:last-child {
+  border-right: 0;
+}
+
+.business-grid strong {
+  display: block;
+  margin-bottom: 46px;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.business-grid h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.business-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.card-inquiry {
+  display: block;
+  margin-top: 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.catalog-summary strong {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .business-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .business-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .business-grid article:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 520px) {
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-grid article,
+  .business-grid article:nth-child(2) {
+    min-height: 180px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .business-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .business-grid strong {
+    margin-bottom: 24px;
+  }
+
+  .intro-actions .button {
+    width: 100%;
+  }
+}
