@@ -141,6 +141,10 @@ a { -webkit-tap-highlight-color: transparent; }
   cursor: pointer;
 }
 
+.mobile-contact {
+  display: none;
+}
+
 .menu-button svg,
 .mobile-contact svg {
   width: 22px;
@@ -1181,7 +1185,7 @@ details p {
 .business-grid strong {
   display: block;
   margin-bottom: 46px;
-  color: var(--accent);
+  color: var(--gold);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 20px;
 }
@@ -1200,11 +1204,63 @@ details p {
 .card-inquiry {
   display: block;
   margin-top: 8px;
-  color: var(--accent);
+  color: var(--gold);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+.competitor-grid,
+.price-band-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.competitor-grid article,
+.price-band-grid article {
+  min-height: 210px;
+  padding: 24px;
+  background: var(--surface);
+}
+
+.competitor-grid strong,
+.price-band-grid strong {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.competitor-grid span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.competitor-grid p,
+.price-band-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.price-band-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.price-band-grid h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
 }
 
 .intro-actions {
@@ -1225,6 +1281,11 @@ details p {
     grid-template-columns: 1fr 1fr;
   }
 
+  .competitor-grid,
+  .price-band-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .business-grid article:nth-child(2) {
     border-right: 0;
   }
@@ -1237,6 +1298,16 @@ details p {
 @media (max-width: 520px) {
   .business-grid {
     grid-template-columns: 1fr;
+  }
+
+  .competitor-grid,
+  .price-band-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competitor-grid article,
+  .price-band-grid article {
+    min-height: 170px;
   }
 
   .business-grid article,
