@@ -1376,6 +1376,46 @@ details p {
   font-weight: 700;
 }
 
+.direction-split {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(320px, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.direction-split h2 {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 4vw, 56px);
+  letter-spacing: 0;
+}
+
+.direction-split p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.direction-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--line);
+  list-style: none;
+}
+
+.direction-list li {
+  min-height: 112px;
+  padding: 22px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
 @media (max-width: 900px) {
   .business-grid {
     grid-template-columns: 1fr 1fr;
@@ -1384,6 +1424,10 @@ details p {
   .competitor-grid,
   .price-band-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .direction-split {
+    grid-template-columns: 1fr;
   }
 
   .business-grid article:nth-child(2) {
@@ -1404,6 +1448,14 @@ details p {
   .competitor-grid,
   .price-band-grid {
     grid-template-columns: 1fr;
+  }
+
+  .direction-list {
+    grid-template-columns: 1fr;
+  }
+
+  .direction-list li {
+    min-height: 88px;
   }
 
   .competitor-grid article,
