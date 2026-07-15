@@ -1083,6 +1083,11 @@ details p {
 
 .catalog-grid { min-height: 380px; }
 
+.catalog-grid .product-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 520px;
+}
+
 .catalog-empty {
   padding: 70px 24px;
   text-align: center;
